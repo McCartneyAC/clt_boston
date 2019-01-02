@@ -69,7 +69,7 @@ server <- function(input, output) {
         }
         return(mus)
     }
-    # produces a histogram of sample means. 
+    # produces a histogram of original distribution. 
     output$originaldistPlot <- renderPlot({
             ggplot(data = boston, aes(x = medv)) + geom_histogram() +
             geom_vline(aes(xintercept = mean(medv, na.rm = TRUE))) +
